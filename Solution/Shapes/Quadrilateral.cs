@@ -22,7 +22,7 @@ namespace Solution.Shapes
                 for (int j = 0; j < _width; j++)
                 {
                     if (i == 0 || i == _height - 1 || j == 0 || j == _width - 1)
-                        DrawProvider.Drawer.Draw(_height + j, _width + i);
+                        DrawProvider.Drawer.Draw(j, i);
                 }
             }
         }

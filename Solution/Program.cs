@@ -1,8 +1,14 @@
 ﻿using Solution.Shapes;
 
-Shape q = new Quadrilateral(5, 10);
-Shape s = new Square(5);
-Shape t = new Triangle(7);
-Shape c = new Circle(10);
-t.Paint();
-Console.ReadKey();
+List<Shape> shapes = new List<Shape> { new Quadrilateral(5, 10), 
+                                     new Square(5), 
+                                     new Triangle(7),
+                                     new Circle(10) };
+foreach (Shape shape in shapes)
+{
+    shape.Paint();
+    Console.WriteLine("\n" + shape);
+    Console.WriteLine("Tap to continue");
+    Console.ReadKey();
+    Console.Clear();
+}

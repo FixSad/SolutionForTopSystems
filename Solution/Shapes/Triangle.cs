@@ -5,10 +5,13 @@ namespace Solution.Shapes
     internal class Triangle : Shape
     {
         private int _height;
+        public override double Area { get; }
 
-        public Triangle(int height) => _height = height;
-
-        public override double Area => throw new NotImplementedException();
+        public Triangle(int height)
+        {
+            _height = height;
+            Area = CalculateArea();
+        }
 
         public override void Paint()
         {
@@ -22,9 +25,6 @@ namespace Solution.Shapes
             }
         }
 
-        protected override double CalculateArea()
-        {
-            throw new NotImplementedException();
-        }
+        protected override double CalculateArea() => (_height * (_height - 1)) / 2;
     }
 }
