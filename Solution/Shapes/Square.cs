@@ -21,9 +21,9 @@ namespace Solution.Shapes
                 for (int j = 0; j < _side; j++)
                 {
                     if (i == 0 || i == _side - 1 || j == 0 || j == _side - 1)
-                        Console.Write("*");
+                        DrawProvider.Drawer.Draw(i, j);
                     else
-                        Console.Write(" ");
+                        DrawProvider.Drawer.Erase(i, j);
                 }
                 Console.WriteLine();
             }

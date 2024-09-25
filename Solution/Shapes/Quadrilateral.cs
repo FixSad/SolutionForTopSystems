@@ -10,14 +10,11 @@ namespace Solution.Shapes
     internal class Quadrilateral : Shape
     {
         private int _width, _height;
-        private int _left, _top;
 
-        public Quadrilateral(int width, int height, int left, int top)
+        public Quadrilateral(int width, int height)
         {
             _width = width;
             _height = height;
-            _left = left;
-            _top = top;
         }
 
         public override void Paint()
@@ -27,7 +24,7 @@ namespace Solution.Shapes
                 for (int j = 0; j < _width; j++)
                 {
                     if (i == 0 || i == _height - 1 || j == 0 || j == _width - 1)
-                        DrawProvider.Drawer.Draw(_left + j, _top + i);
+                        DrawProvider.Drawer.Draw(_height + j, _width + i);
                 }
             }
         }
