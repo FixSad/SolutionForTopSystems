@@ -1,4 +1,5 @@
 ﻿using ConsoleDrawer;
+using Solution.Shapes;
 
-IDrawer drawer = new Drawer();
-drawer.Draw(3, 5);
+Shape shape = new Square(10);
+shape.Paint();

@@ -1,8 +1,8 @@
 ﻿namespace ConsoleDrawer
 {
-    public class Drawer : IDrawer
+    internal class Drawer : IDrawer
     {
-        private readonly char _symbol = '*';
+        private readonly char _symbol = '.';
         public void Draw(int x, int y, ConsoleColor color)
         {
             Console.ForegroundColor = color;
