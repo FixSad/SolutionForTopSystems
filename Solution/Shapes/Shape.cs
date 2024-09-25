@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Solution.Shapes
+﻿namespace Solution.Shapes
 {
     abstract class Shape
     {
+        public abstract double Area { get; }
+        protected abstract double CalculateArea();
         public abstract void Paint();
     }
 }

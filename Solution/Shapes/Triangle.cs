@@ -1,9 +1,4 @@
 ﻿using ConsoleDrawer;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Solution.Shapes
 {
@@ -12,6 +7,8 @@ namespace Solution.Shapes
         private int _height;
 
         public Triangle(int height) => _height = height;
+
+        public override double Area => throw new NotImplementedException();
 
         public override void Paint()
         {
@@ -23,6 +20,11 @@ namespace Solution.Shapes
                 }
                 Console.WriteLine();
             }
+        }
+
+        protected override double CalculateArea()
+        {
+            throw new NotImplementedException();
         }
     }
 }

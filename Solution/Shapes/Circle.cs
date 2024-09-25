@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ConsoleDrawer;
 
 namespace Solution.Shapes
 {
     internal class Circle : Shape
     {
         private int _radius;
+        public override double Area { get; }
 
         public Circle(int radius)
         {
             _radius = radius;
-
+            Area = CalculateArea();
         }
 
         public override void Paint()
@@ -24,13 +21,11 @@ namespace Solution.Shapes
                 {
                     double distance = Math.Sqrt(Math.Pow(x - _radius, 2) + Math.Pow(y - _radius, 2));
                     if (distance < _radius + 0.5 && distance > _radius - 0.5)
-                    {
-                        Console.SetCursorPosition(_radius + (x+1) - _radius, _radius + (y+1) - _radius);
-                        Console.Write('*');
-                    }
+                        DrawProvider.Drawer.Draw(_radius + (x+1) - _radius, _radius + (y+1) - _radius);
                 }
             }
-            Console.SetCursorPosition(0, 0);
         }
+
+        protected override double CalculateArea() => Math.PI * Math.Pow(_radius, 2);
     }
 }

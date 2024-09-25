@@ -1,9 +1,4 @@
 ﻿using ConsoleDrawer;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Solution.Shapes
 {
@@ -11,10 +6,13 @@ namespace Solution.Shapes
     {
         private int _width, _height;
 
+        public override double Area { get; }
+
         public Quadrilateral(int width, int height)
         {
             _width = width;
             _height = height;
+            Area = CalculateArea();
         }
 
         public override void Paint()
@@ -28,5 +26,7 @@ namespace Solution.Shapes
                 }
             }
         }
+
+        protected override double CalculateArea() => _width * _height;
     }
 }
