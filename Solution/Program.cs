@@ -1,2 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using ConsoleDrawer;
+
+IDrawer drawer = new Drawer();
+drawer.Draw(3, 5);
