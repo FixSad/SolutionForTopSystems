@@ -10,10 +10,9 @@ namespace Solution.Shapes
 {
     internal class Square : Shape
     {
-        private double _side;
+        private int _side;
 
-
-        public Square(double side) => _side = side;
+        public Square(int side) => _side = side;
 
         public override void Paint()
         {
@@ -21,7 +20,10 @@ namespace Solution.Shapes
             {
                 for (int j = 0; j < _side; j++)
                 {
-                    DrawProvider.Drawer.Draw(i, j);
+                    if (i == 0 || i == _side - 1 || j == 0 || j == _side - 1)
+                        Console.Write("*");
+                    else
+                        Console.Write(" ");
                 }
                 Console.WriteLine();
             }

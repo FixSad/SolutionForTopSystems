@@ -1,5 +1,6 @@
 ﻿using ConsoleDrawer;
 using Solution.Shapes;
 
-Shape shape = new Square(10);
-shape.Paint();
+Shape q = new Quadrilateral(5, 5, 5, 5);
+Shape s = new Square(5);
+s.Paint();
